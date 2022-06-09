@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;600&display=swap");
+
+body {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Overpass", sans-serif;
+  color: white;
+  background-color: #121417;
+  display: block;
+}
+
+#container {
+  background-color: #252d37;
+  height: 350px;
+  width: 350px;
+  margin: 4em auto;
+  border-radius: 2em;
+  padding: 30px;
+  margin-top: 12rem;
+
+  .icon {
+    border-radius: 50%;
+    background-color: #3e4b5b;
+    border: none;
+    margin: 0.25em;
+    height: 48px;
+    width: 48px;
+    transition: transform 1s;
+    &.icon:hover {
+      transform: rotate(190deg);
+      transition: transform 1s;
+    }
+  }
+
+  h1 {
+    color: white;
+  }
+
+  p {
+    color: #959eac;
+    font-size: 15px;
+    line-height: 1.5em;
+  }
+
+  .rate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a {
+      background-color: #3e4b5b;
+      height: 48px;
+      width: 48px;
+      display: flex;
+      border-radius: 50%;
+      opacity: 50%;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    .rate:hover a {
+      opacity: 100%;
+      transition: opacity 1s;
+    }
+    a:hover ~ a {
+      opacity: 50%;
+    }
+    a.active {
+      opacity: 100%;
+      background-color: #fb7413;
+      transition: opacity, background-color 0.5s;
+    }
+  }
+
+  input[type="submit"] {
+    width: 350px;
+    margin-top: 30px;
+    padding: 16px;
+    color: white;
+    background-color: #fb7413;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 8px;
+    border-radius: 2em;
+    border: none;
+  }
+
+  .hidden {
+    visibility: hidden;
+    display: none;
+  }
+  .result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .score {
+      border-radius: 2em;
+      background-color: #3e4b5b;
+      color: #fb7413;
+      padding: 5px 20px 5px 20px;
+      margin: 20px auto;
+      &.score-img {
+        margin-top: 10px;
+      }
+    }
+  }
+  .thanks {
+    text-align: center;
+    margin-top: 5px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: #3e52a3;
+  }
+}
